@@ -1,0 +1,13 @@
+/* pages/scan/scan.wxss */
+.page {
+  padding: 30rpx 30rpx;
+  .camera {
+    margin: 0 auto;
+    border: 20px solid cyan;
+    width: 600rpx;
+    height: 600rpx;
+  }
+  button {
+    margin: 10px auto;
+  }
+}

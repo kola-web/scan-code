@@ -1,0 +1,25 @@
+<!--pages/scan/scan.wxml-->
+<view class="page">
+  <view wx:if="{{scanCode}}" class="title">
+    <!-- <view>扫码类型为：{{scanTypeNmae}}</view> -->
+    <view>扫描结果为：{{scanCode}}</view>
+  </view>
+  <camera
+    wx:if="{{scan}}"
+    class="camera"
+    mode="scanCode"
+    flash="{{flash}}"
+    binderror="cameraError"
+    bindscancode="scancode"
+    frame-size="large"
+    bindscancode="bindScanCode"
+    binderror="cameraError"
+  ></camera>
+
+  <!-- <image src="{{scanCode}}"></image> -->
+  <!-- <button bind:tap="handleStart">开始监听</button>
+  <button bind:tap="handleStop">结束监听</button> -->
+  <button wx:if="{{!scan}}" bind:tap="againScan">再次扫描</button>
+  <button bind:tap="openFlash">打开闪光灯</button>
+  <button bind:tap="closureFlash">关闭闪光灯</button>
+</view>
